@@ -1,0 +1,54 @@
+---
+BasedOnStyle: LLVM
+Language: Cpp
+
+# C++
+Standard: Latest
+
+# indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# line length
+ColumnLimit: 100
+
+# braces
+BreakBeforeBraces: Allman
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# pointer alignment
+PointerAlignment: Left
+
+# access modifiers
+AccessModifierOffset: -4
+IndentAccessModifiers: false
+
+# indentation
+IndentCaseLabels: true
+IndentCaseBlocks: true
+
+# spaces
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# empty lines
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# alignment
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+
+# constructor initializer lists
+PackConstructorInitializers: NextLine
+
+# C++11
+Cpp11BracedListStyle: true
+
+# namespaces
+NamespaceIndentation: None

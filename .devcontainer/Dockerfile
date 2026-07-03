@@ -2,6 +2,7 @@ FROM mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04
 
 RUN apt-get update && apt-get install -y \
     cmake \
+    clang-format \
     ninja-build \
     gdb \
     valgrind \
