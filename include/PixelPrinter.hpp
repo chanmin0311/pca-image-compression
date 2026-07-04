@@ -2,7 +2,7 @@
 #pragma once
 
 #include <iostream>
-#include <opencv4/opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 
 class PixelPrinter
 {
@@ -37,6 +37,12 @@ class RGBAPixelPrinter : public PixelPrinter
 public:
     void print(const cv::Mat& image, int row, int col) const override
     {
+        if (image.depth() != CV_8U)
+        {
+            std::cerr << "Unsupported pixel depth for RGBA printing." << std::endl;
+            return;
+        }
+
         cv::Vec4b pixel = image.at<cv::Vec4b>(row, col);
         std::cout << "(" << static_cast<int>(pixel[0]) << " " << static_cast<int>(pixel[1]) << " "
                   << static_cast<int>(pixel[2]) << " " << static_cast<int>(pixel[3]) << ")" << " ";
